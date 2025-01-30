@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-col lg:flex-row items-center justify-center p-10 text-clay-cream  bg-clay-darkBrown"
+      className="flex flex-col lg:flex-row items-center justify-center p-10 text-clay-cream  bg-clay-darkBrown border-none"
     >
       <div className="flex flex-col max-w-[800px] gap-6 px-6 py-10 md:px-20">
         <h2 className="text-xl md:text-3xl md:leading-normal font-extrabold">
@@ -23,12 +23,12 @@ const AboutSection: React.FC = () => {
           and versatile tech stacks, and I’m eager to grow as an innovative
           developer through meaningful connections and opportunities.
         </p>
-        <p className="text-md md:text-xl md:leading-normal">
+        {/* <p className="text-md md:text-xl md:leading-normal">
           On a personal note, I figured pictures would tell my story best—one is
           worth a thousand words after all. Check out the carousel to what I've
           been up to, and explore my projects in the next section. Feel free to
           reach out if you want to connect!
-        </p>
+        </p> */}
       </div>
       <div className="mt-4 lg:mt-0 px-6 py-10 lg:px-10">
         <div className="rounded-full w-[400px] h-[400px] relative overflow-hidden border-[6px] hover:border-dashed border-clay-green">

@@ -1,0 +1,50 @@
+.cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --angle: 50deg;
+  &:hover {
+    --angle: 120deg;
+  }
+}
+
+.cards div:nth-child(1) {
+  transform: translate(-50%, -50%)
+    rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 1));
+}
+
+.cards div:nth-child(2) {
+  transform: translate(-50%, -50%)
+    rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 2));
+}
+
+.cards div:nth-child(3) {
+  transform: translate(-50%, -50%)
+    rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 3));
+}
+
+.cards div:nth-child(4) {
+  transform: translate(-50%, -50%)
+    rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 4));
+}
+
+.cards div:nth-child(5) {
+  transform: translate(-50%, -50%)
+    rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 5));
+}
+
+.card {
+  background: #3e2723;
+  height: 300px;
+  width: 225px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center 120%;
+  transition: transform 300ms ease-out;
+  overflow: hidden;
+}

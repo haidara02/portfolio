@@ -3,7 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import GitHubIcon from '../../../public/github.svg';
 import LinkedInIcon from '../../../public/linkedin.svg';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import {
+  CheckCircleIcon,
+  XCircleIcon,
+  EnvelopeIcon,
+} from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -23,7 +27,7 @@ interface FetchOptions {
 }
 
 const ContactSection: React.FC = () => {
-  const [mailSent, setMailSent] = useState(false);
+  const [mailSent, setMailSent] = useState(true);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -59,7 +63,7 @@ const ContactSection: React.FC = () => {
   //       setMailSent(true);
   //       setTimeout(() => {
   //         setMailSent(false);
-  //       }, 5000);
+  //       }, 3000);
   //     }
   //   };
   return (
@@ -67,20 +71,30 @@ const ContactSection: React.FC = () => {
       id="contact"
       className="flex flex-col items-center justify-center p-20 gap-2 text-clay-darkBrown bg-clay-cream"
     >
-      <div>
+      <div className="text-center flex-col flex gap-3">
         <h2 className="text-xl md:text-4xl md:leading-normal font-extrabold">
           Contact
         </h2>
+        <div className="text-md md:leading-normal">
+          Feel free to share any suggestions to help me improve, or just say
+          hi—I'd love to hear from you!
+        </div>
       </div>
-      <div className="w-[90%] lg:w-1/2 relative">
+      <div className="w-[90%] max-w-[600px] mt-5 lg:w-1/2 relative">
         <div
           className={clsx(
-            'absolute w-full h-full flex items-center gap-2 justify-center z-10',
+            'absolute w-full h-full flex items-center justify-center z-10',
             !mailSent && 'hidden'
           )}
         >
-          <h2 className="text-xl font-bold">Message sent successfully!</h2>{' '}
-          <CheckCircleIcon className="w-10 h-10 text-green-700" />
+          <div className="flex items-center justify-center gap-2 bg-opacity-80 bg-clay-darkBrown rounded-lg p-2 text-white">
+            <h2 className="text-sm font-bold m-5">
+              Form currently unavailable (domain invalid). Please click the
+              email icon below to send an email through your associated mail
+              app.
+            </h2>
+            <XCircleIcon className="w-20 h-20 text-red-700" />
+          </div>
         </div>
         <form
           className={clsx('flex flex-col gap-5', mailSent && 'blur-sm')}
@@ -135,7 +149,13 @@ const ContactSection: React.FC = () => {
           </button>
         </form>
       </div>
-      <div className="socials flex flew-row gap-2 mt-2">
+      <div className="socials flex flew-row gap-2 py-5">
+        <Link
+          href="mailto:nguyentuankhoi@gmail.com"
+          className="bg-clay-darkBrown hover:bg-clay-brown rounded-full p-3 scale-100 hover:scale-110 transition-transform ease-in-out duration-100"
+        >
+          <EnvelopeIcon className="h-[25px] w-[25px] text-clay-cream" />
+        </Link>
         <Link
           href="http://github.com/haidara02"
           className="bg-clay-darkBrown hover:bg-clay-brown rounded-full p-3 scale-100 hover:scale-110 transition-transform ease-in-out duration-100"
