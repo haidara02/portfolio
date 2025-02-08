@@ -123,8 +123,12 @@ const Carousel: React.FC<PropType> = (props) => {
                     src={`/images/projects/project_${slide.id}.jpg`}
                     className="embla__slide__img"
                     alt={`Slide ${slide.id}`}
-                    width={100}
-                    height={100}
+                    width={160}
+                    height={90}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                 </div>
               </div>
