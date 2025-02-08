@@ -120,7 +120,7 @@ const Carousel: React.FC<PropType> = (props) => {
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
                   <Image
-                    src={`/images/projects/project_${slide.id}.png`}
+                    src={`/images/projects/project_${slide.id}.jpg`}
                     className="embla__slide__img"
                     alt={`Slide ${slide.id}`}
                     width={100}
