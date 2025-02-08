@@ -14,7 +14,7 @@ import clsx from 'clsx';
 const ContactSection: React.FC = () => {
   const [mailSent, setMailSent] = useState(true);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMailSent(true);
     setTimeout(() => {
@@ -62,7 +62,7 @@ const ContactSection: React.FC = () => {
         </h2>
         <div className="text-md md:leading-normal">
           Feel free to share any suggestions to help me improve, or just say
-          hi—I'd love to hear from you!
+          hi—I&apos;d love to hear from you!
         </div>
       </div>
       <div className="w-[90%] max-w-[600px] mt-5 lg:w-1/2 relative">

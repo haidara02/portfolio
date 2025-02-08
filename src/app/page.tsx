@@ -1,5 +1,4 @@
 'use client';
-import clsx from 'clsx';
 import Navbar from '@/app/ui/navbar';
 import HeroSection from '@/app/ui/herosection';
 import AboutSection from '@/app/ui/aboutsection';
