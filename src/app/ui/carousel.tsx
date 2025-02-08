@@ -125,6 +125,7 @@ const Carousel: React.FC<PropType> = (props) => {
                     alt={`Slide ${slide.id}`}
                     width={160}
                     height={90}
+                    quality={100}
                     style={{
                       width: '100%',
                       height: 'auto',
