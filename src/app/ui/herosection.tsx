@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import { EnvelopeIcon, DocumentTextIcon } from '@heroicons/react/24/solid';
 import { useState, useEffect } from 'react';
@@ -60,7 +59,7 @@ const HeroSection: React.FC = () => {
                 : 'translate-y-0 opacity-100'
             )}
           >
-            I'm Khoi.
+            I&apos;m Khoi.
           </span>
         </p>
         <p className={`text-md md:text-xl md:leading-normal`}>
@@ -81,10 +80,10 @@ const HeroSection: React.FC = () => {
           <span
             className={`absolute h-px w-px m-[-1px] overflow-hidden p-0 clip-rect-[1px_1px_1px_1px] clip-path-inset-[50%]`}
           >
-            When I'm not coding, I drink coffee, travel, and perhaps dabble in
+            When I&apos;m not coding, I drink coffee, travel, and perhaps dabble in
             gaming
           </span>
-          When I'm not coding, I like to{' '}
+          When I&apos;m not coding, I like to{' '}
           <TypeAnimation
             className={`text-md md:text-xl md:leading-normal`}
             sequence={[

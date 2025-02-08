@@ -1,30 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import GitHubIcon from '../../../public/github.svg';
-import LinkedInIcon from '../../../public/linkedin.svg';
+import React, { useState } from 'react';
+// import GitHubIcon from '../../../public/github.svg';
+// import LinkedInIcon from '../../../public/linkedin.svg';
 import {
-  CheckCircleIcon,
+  // CheckCircleIcon,
   XCircleIcon,
   EnvelopeIcon,
 } from '@heroicons/react/24/solid';
-import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
-
-interface FormData {
-  email: string;
-  name: string;
-  message: string;
-}
-
-interface FetchOptions {
-  method: string;
-  headers: {
-    'Content-Type': string;
-  };
-  body: string;
-}
 
 const ContactSection: React.FC = () => {
   const [mailSent, setMailSent] = useState(true);

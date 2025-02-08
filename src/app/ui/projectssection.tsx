@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Carousel from './carousel';
 import { EmblaOptionsType } from 'embla-carousel';
 
 const OPTIONS: EmblaOptionsType = {};
 // const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
-const SLIDE_COUNT = 4;
+// const SLIDE_COUNT = 4;
 // const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 const SLIDES = [
   {
