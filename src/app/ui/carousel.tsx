@@ -126,6 +126,7 @@ const Carousel: React.FC<PropType> = (props) => {
                     width={160}
                     height={90}
                     quality={100}
+                    unoptimized={true}
                     style={{
                       width: '100%',
                       height: 'auto',
