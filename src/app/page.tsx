@@ -10,14 +10,18 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <Navbar />
-      <div className="relative z-0">
+      <div className="fixed top-0 left-0 w-full h-screen z-0">
         <HeroSection />
       </div>
-
-      <AboutSection />
-      <ProjectsSection />
-      <ContactSection />
-      <FooterSection />
+      <div className="relative z-10 mt-[85vh]">
+        <div className="h-[100px] relative overflow-hidden">
+          <div className="h-[100px] bg-clay-darkBrown watermask"></div>
+        </div>
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
+        <FooterSection />
+      </div>
     </main>
   );
 }

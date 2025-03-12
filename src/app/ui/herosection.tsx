@@ -37,27 +37,26 @@ const HeroSection: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="flex flex-col lg:flex-row gap-1 md:gap-5 items-center justify-center px-10 min-h-[90vh] bg-clay-cream">
-      <div className="flex flex-col justify-center gap-6 px-6 py-10 md:px-10 text-clay-darkBrown">
-        <p
-          className="text-3xl md:text-6xl md:leading-normal font-extrabold flex overflow-hidden"
-          style={{ whiteSpace: "nowrap" }}
-        >
+    <section className="flex flex-col lg:flex-row gap-1 md:gap-5 items-center justify-center px-10 min-h-[90vh] bg-clay-cream text-clay-darkBrown">
+      <div className="flex flex-col justify-center gap-6 px-6 py-10 md:px-10">
+        <p className="md:leading-normal font-extrabold flex overflow-hidden text-clamp">
           <span
             className={clsx(
               `relative transition-all duration-1000 mr-5 ease-in-out overflow-hidden`,
               fade ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
             )}
+            style={{ whiteSpace: "nowrap" }}
           >
             {currentGreeting}
           </span>
           <span
             className={clsx(
-              `relative transition-all duration-1000 mr-5 ease-in-out overflow-hidden`,
+              `relative transition-all duration-1000 ease-in-out overflow-hidden`,
               fade
                 ? "-translate-y-[-100%] opacity-0"
                 : "translate-y-0 opacity-100"
             )}
+            style={{ whiteSpace: "nowrap" }}
           >
             I&apos;m Khoi.
           </span>
@@ -84,7 +83,7 @@ const HeroSection: React.FC = () => {
             in gaming
           </span>
           When I&apos;m not coding, I like to{" "}
-          <TypeAnimation
+          {/* <TypeAnimation
             className={`text-md md:text-xl md:leading-normal`}
             sequence={[
               "drink coffee ☕",
@@ -96,7 +95,7 @@ const HeroSection: React.FC = () => {
             ]}
             repeat={Infinity}
             wrapper="span"
-          />
+          /> */}
         </span>
 
         <p className={`text-md md:text-xl md:leading-normal`}>

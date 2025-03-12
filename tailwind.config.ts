@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        clamp: "clamp(2rem, 2.5vw, 4rem)",
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

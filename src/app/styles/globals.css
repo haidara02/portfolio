@@ -42,6 +42,16 @@ body {
   animation: wave 100s linear infinite;
 }
 
+@media (max-width: 640px) {
+  .watermask {
+    --size: 25px;
+    --mask: radial-gradient(37.575px at 50% 50.75px, #000 99%, #0000 101%)
+        calc(50% - 35px) 0/70px 100%,
+      radial-gradient(37.575px at 50% -33.25px, #0000 99%, #000 101%) 50% 17.5px/70px
+        100% repeat-x;
+  }
+}
+
 @keyframes wave {
   100% {
     transform: translate3d(-300vw, 0, 0px);

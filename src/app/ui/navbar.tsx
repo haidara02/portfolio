@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={clsx(
-        "bg-clay-green bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-10 transition-transform duration-500",
+        "bg-clay-green backdrop-blur-lg bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-20 transition-transform duration-500",
         showNavbar ? "translate-y-0" : "-translate-y-full"
       )}
     >
