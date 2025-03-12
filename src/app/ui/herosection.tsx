@@ -83,7 +83,7 @@ const HeroSection: React.FC = () => {
             in gaming
           </span>
           When I&apos;m not coding, I like to{" "}
-          {/* <TypeAnimation
+          <TypeAnimation
             className={`text-md md:text-xl md:leading-normal`}
             sequence={[
               "drink coffee ☕",
@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
             ]}
             repeat={Infinity}
             wrapper="span"
-          /> */}
+          />
         </span>
 
         <p className={`text-md md:text-xl md:leading-normal`}>
