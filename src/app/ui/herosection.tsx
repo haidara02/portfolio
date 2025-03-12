@@ -37,9 +37,9 @@ const HeroSection: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="flex flex-col lg:flex-row gap-1 md:gap-5 items-center justify-center px-10 min-h-[90vh] bg-clay-cream text-clay-darkBrown">
-      <div className="flex flex-col justify-center gap-6 px-6 py-10 md:px-10">
-        <p className="md:leading-normal font-extrabold flex overflow-hidden text-clamp">
+    <section className="flex flex-col lg:flex-row gap-1 md:gap-5 items-center justify-center px-10 py-[80px] min-h-[100vh] md:min-h-[90vh] bg-clay-cream text-clay-darkBrown">
+      <div className="flex flex-col justify-center gap-6 px-6 pt-5 md:px-10">
+        <p className="font-extrabold flex overflow-hidden text-clamp flex-col md:flex-row">
           <span
             className={clsx(
               `relative transition-all duration-1000 mr-5 ease-in-out overflow-hidden`,
@@ -61,7 +61,7 @@ const HeroSection: React.FC = () => {
             I&apos;m Khoi.
           </span>
         </p>
-        <p className={`text-md md:text-xl md:leading-normal`}>
+        <p className={`text-sm md:text-xl md:leading-normal`}>
           I just finished my undergrad at{" "}
           <a
             href="https://www.unsw.edu.au/"
@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
           studying Computer Science.
         </p>
         <span
-          className={`positiom-relative text-md md:text-xl md:leading-normal`}
+          className={`relative text-sm md:text-xl md:leading-normal min-h-10`}
         >
           <span
             className={`absolute h-px w-px m-[-1px] overflow-hidden p-0 clip-rect-[1px_1px_1px_1px] clip-path-inset-[50%]`}
@@ -84,7 +84,6 @@ const HeroSection: React.FC = () => {
           </span>
           When I&apos;m not coding, I like to{" "}
           <TypeAnimation
-            className={`text-md md:text-xl md:leading-normal`}
             sequence={[
               "drink coffee ☕",
               1000,
@@ -98,7 +97,7 @@ const HeroSection: React.FC = () => {
           />
         </span>
 
-        <p className={`text-md md:text-xl md:leading-normal`}>
+        <p className={`text-sm md:text-xl md:leading-normal`}>
           Hoping to make a positive difference on the world—whether big or
           small— and be there to see it happen 😆
         </p>
@@ -107,7 +106,8 @@ const HeroSection: React.FC = () => {
             href="#contact"
             className="flex items-center gap-2 rounded-full bg-clay-green px-6 py-3 text-sm w-full sm:w-fit font-medium text-white transition-colors hover:bg-clay-darkGreen md:text-base"
           >
-            <span>Contact Me</span> <EnvelopeIcon className="w-5 md:w-6" />
+            <span>Contact </span> <span>Me</span>{" "}
+            <EnvelopeIcon className="w-5 md:w-6" />
           </Link>
           <Link
             href="https://drive.google.com/file/d/1D9IlVR_hdvUmp_Z_ADEe4_rno0P3Mr-8/view?usp=sharing"
@@ -115,7 +115,7 @@ const HeroSection: React.FC = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full bg-clay-darkBrown px-6 py-3 text-sm w-full sm:w-fit font-medium text-white transition-colors hover:bg-clay-brown md:text-base"
           >
-            <span>Download CV</span>
+            <span>Download</span> <span> CV</span>
             <DocumentTextIcon className="w-5 md:w-6" />
           </Link>
         </div>

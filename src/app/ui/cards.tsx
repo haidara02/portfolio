@@ -5,7 +5,7 @@ import "../styles/cards.css";
 
 const Cards = () => {
   return (
-    <div className="cards relative flex justify-center items-center lg:mt-0 min-h-[266px] min-w-[400px] md:min-h-[400px] md:min-w-[600px]">
+    <div className="cards relative flex justify-center items-center min-h-[160px] min-w-[200px] sm:min-h-[266px] sm:min-w-[400px] md:min-h-[400px] md:min-w-[600px]">
       <div className="card h-[65%] w-[30%]">
         <Image
           src="/images/slide5.jpg"
