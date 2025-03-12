@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import { openSans } from '@/app/ui/fonts';
-import './styles/globals.css';
+import type { Metadata } from "next";
+import { openSans } from "@/app/ui/fonts";
+import "./styles/globals.css";
 
 export const metadata: Metadata = {
-  title: 'KNG',
+  title: "KNG",
   description: "Khoi's Portfolio",
 };
 

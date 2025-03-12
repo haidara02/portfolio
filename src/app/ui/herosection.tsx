@@ -1,22 +1,22 @@
-'use client';
-import Link from 'next/link';
-import { EnvelopeIcon, DocumentTextIcon } from '@heroicons/react/24/solid';
-import { useState, useEffect } from 'react';
-import clsx from 'clsx';
-import { TypeAnimation } from 'react-type-animation';
-import Cards from './cards';
+"use client";
+import Link from "next/link";
+import { EnvelopeIcon, DocumentTextIcon } from "@heroicons/react/24/solid";
+import { useState, useEffect } from "react";
+import clsx from "clsx";
+import { TypeAnimation } from "react-type-animation";
+import Cards from "./cards";
 
 const HeroSection: React.FC = () => {
   const greetings = [
-    'Xin Chào!',
-    'Hello!',
-    'Hola!',
-    'Bonjour!',
-    'Hallo!',
-    'Ciao!',
-    'こんにちは!',
-    '안녕하세요!',
-    '你好!',
+    "Xin Chào!",
+    "Hello!",
+    "Hola!",
+    "Bonjour!",
+    "Hallo!",
+    "Ciao!",
+    "こんにちは!",
+    "안녕하세요!",
+    "你好!",
   ];
   const [currentGreeting, setCurrentGreeting] = useState(greetings[0]);
   const [fade, setFade] = useState(false);
@@ -41,12 +41,12 @@ const HeroSection: React.FC = () => {
       <div className="flex flex-col justify-center gap-6 px-6 py-10 md:px-10 text-clay-darkBrown">
         <p
           className="text-3xl md:text-6xl md:leading-normal font-extrabold flex overflow-hidden"
-          style={{ whiteSpace: 'nowrap' }}
+          style={{ whiteSpace: "nowrap" }}
         >
           <span
             className={clsx(
               `relative transition-all duration-1000 mr-5 ease-in-out overflow-hidden`,
-              fade ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+              fade ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
             )}
           >
             {currentGreeting}
@@ -55,15 +55,15 @@ const HeroSection: React.FC = () => {
             className={clsx(
               `relative transition-all duration-1000 mr-5 ease-in-out overflow-hidden`,
               fade
-                ? '-translate-y-[-100%] opacity-0'
-                : 'translate-y-0 opacity-100'
+                ? "-translate-y-[-100%] opacity-0"
+                : "translate-y-0 opacity-100"
             )}
           >
             I&apos;m Khoi.
           </span>
         </p>
         <p className={`text-md md:text-xl md:leading-normal`}>
-          I just finished my undergrad at{' '}
+          I just finished my undergrad at{" "}
           <a
             href="https://www.unsw.edu.au/"
             target="_blank"
@@ -71,7 +71,7 @@ const HeroSection: React.FC = () => {
             className="text-clay-green font-semibold"
           >
             UNSW
-          </a>{' '}
+          </a>{" "}
           studying Computer Science.
         </p>
         <span
@@ -80,18 +80,18 @@ const HeroSection: React.FC = () => {
           <span
             className={`absolute h-px w-px m-[-1px] overflow-hidden p-0 clip-rect-[1px_1px_1px_1px] clip-path-inset-[50%]`}
           >
-            When I&apos;m not coding, I drink coffee, travel, and perhaps dabble in
-            gaming
+            When I&apos;m not coding, I drink coffee, travel, and perhaps dabble
+            in gaming
           </span>
-          When I&apos;m not coding, I like to{' '}
+          When I&apos;m not coding, I like to{" "}
           <TypeAnimation
             className={`text-md md:text-xl md:leading-normal`}
             sequence={[
-              'drink coffee ☕',
+              "drink coffee ☕",
               1000,
-              'travel ✈️',
+              "travel ✈️",
               1000,
-              'dabble in RPG games 🤓',
+              "dabble in RPG games 🤓",
               2000,
             ]}
             repeat={Infinity}

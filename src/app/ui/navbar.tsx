@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {
   ArchiveBoxIcon,
   UserIcon,
@@ -6,20 +6,20 @@ import {
   Bars4Icon,
   XMarkIcon,
   HomeIcon,
-} from '@heroicons/react/24/solid';
-import Link from 'next/link';
-import clsx from 'clsx';
-import React, { useState, useEffect } from 'react';
-import LinksMenu from './linksmenu';
+} from "@heroicons/react/24/solid";
+import Link from "next/link";
+import clsx from "clsx";
+import React, { useState, useEffect } from "react";
+import LinksMenu from "./linksmenu";
 
 const links = [
-  { name: 'About', href: '#about', icon: UserIcon },
+  { name: "About", href: "#about", icon: UserIcon },
   {
-    name: 'Projects',
-    href: '#projects',
+    name: "Projects",
+    href: "#projects",
     icon: ArchiveBoxIcon,
   },
-  { name: 'Contact', href: '#contact', icon: EnvelopeIcon },
+  { name: "Contact", href: "#contact", icon: EnvelopeIcon },
 ];
 
 // Standard navigation bar with mobile responsiveness.
@@ -38,15 +38,15 @@ const Navbar: React.FC = () => {
       }
       setPrevYCoord(currentYCoord);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevYCoord]);
 
   return (
     <nav
       className={clsx(
-        'bg-clay-green bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-10 transition-transform duration-500',
-        showNavbar ? 'translate-y-0' : '-translate-y-full'
+        "bg-clay-green bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-10 transition-transform duration-500",
+        showNavbar ? "translate-y-0" : "-translate-y-full"
       )}
     >
       <div className="flex justify-between items-center h-20 mx-auto px-4 sm:px-6 lg:px-20 lg:py-5">

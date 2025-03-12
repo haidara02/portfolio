@@ -1,11 +1,11 @@
-'use client';
+"use client";
 import React, {
   ComponentPropsWithRef,
   useCallback,
   useEffect,
   useState,
-} from 'react';
-import { EmblaCarouselType } from 'embla-carousel';
+} from "react";
+import { EmblaCarouselType } from "embla-carousel";
 
 type UseDotButtonType = {
   selectedIndex: number;
@@ -43,7 +43,7 @@ export const useDotButton = (
     onInit(emblaApi);
     onSelect(emblaApi);
 
-    emblaApi.on('reInit', onInit).on('reInit', onSelect).on('select', onSelect);
+    emblaApi.on("reInit", onInit).on("reInit", onSelect).on("select", onSelect);
   }, [emblaApi, onInit, onSelect]);
 
   return {
@@ -53,7 +53,7 @@ export const useDotButton = (
   };
 };
 
-type PropType = ComponentPropsWithRef<'button'>;
+type PropType = ComponentPropsWithRef<"button">;
 
 export const DotButton: React.FC<PropType> = (props) => {
   const { children, ...restProps } = props;

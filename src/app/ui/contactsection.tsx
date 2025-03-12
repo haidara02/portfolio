@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import GitHubIcon from '../../../public/github.svg';
 // import LinkedInIcon from '../../../public/linkedin.svg';
 import {
   // CheckCircleIcon,
   XCircleIcon,
   EnvelopeIcon,
-} from '@heroicons/react/24/solid';
-import Link from 'next/link';
-import clsx from 'clsx';
+} from "@heroicons/react/24/solid";
+import Link from "next/link";
+import clsx from "clsx";
 
 const ContactSection: React.FC = () => {
   const [mailSent, setMailSent] = useState(true);
@@ -68,8 +68,8 @@ const ContactSection: React.FC = () => {
       <div className="w-[90%] max-w-[600px] mt-5 lg:w-1/2 relative">
         <div
           className={clsx(
-            'absolute w-full h-full flex items-center justify-center z-10',
-            !mailSent && 'hidden'
+            "absolute w-full h-full flex items-center justify-center z-10",
+            !mailSent && "hidden"
           )}
         >
           <div className="flex items-center justify-center gap-2 bg-opacity-80 bg-clay-darkBrown rounded-lg p-2 text-white">
@@ -82,7 +82,7 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
         <form
-          className={clsx('flex flex-col gap-5', mailSent && 'blur-sm')}
+          className={clsx("flex flex-col gap-5", mailSent && "blur-sm")}
           onSubmit={handleSubmit}
         >
           <div>

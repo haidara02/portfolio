@@ -1,20 +1,20 @@
-'use client';
-import React, { useCallback, useEffect, useRef } from 'react';
+"use client";
+import React, { useCallback, useEffect, useRef } from "react";
 import {
   EmblaCarouselType,
   EmblaEventType,
   EmblaOptionsType,
-} from 'embla-carousel';
-import '../styles/carousel.css';
-import useEmblaCarousel from 'embla-carousel-react';
-import ClassNames from 'embla-carousel-class-names';
-import { DotButton, useDotButton } from '@/app/ui/carouseldotbuttons';
+} from "embla-carousel";
+import "../styles/carousel.css";
+import useEmblaCarousel from "embla-carousel-react";
+import ClassNames from "embla-carousel-class-names";
+import { DotButton, useDotButton } from "@/app/ui/carouseldotbuttons";
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from '@/app/ui/carouselarrowbuttons';
-import Image from 'next/image';
+} from "@/app/ui/carouselarrowbuttons";
+import Image from "next/image";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
@@ -48,7 +48,7 @@ const Carousel: React.FC<PropType> = (props) => {
 
   const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector('.embla__parallax__layer') as HTMLElement;
+      return slideNode.querySelector(".embla__parallax__layer") as HTMLElement;
     });
   }, []);
 
@@ -61,7 +61,7 @@ const Carousel: React.FC<PropType> = (props) => {
       const engine = emblaApi.internalEngine();
       const scrollProgress = emblaApi.scrollProgress();
       const slidesInView = emblaApi.slidesInView();
-      const isScrollEvent = eventName === 'scroll';
+      const isScrollEvent = eventName === "scroll";
 
       emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
         let diffToTarget = scrollSnap - scrollProgress;
@@ -104,11 +104,11 @@ const Carousel: React.FC<PropType> = (props) => {
     tweenParallax(emblaApi);
 
     emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenParallax)
-      .on('scroll', tweenParallax)
-      .on('slideFocus', tweenParallax);
+      .on("reInit", setTweenNodes)
+      .on("reInit", setTweenFactor)
+      .on("reInit", tweenParallax)
+      .on("scroll", tweenParallax)
+      .on("slideFocus", tweenParallax);
   }, [emblaApi, tweenParallax]);
 
   return (
@@ -128,8 +128,8 @@ const Carousel: React.FC<PropType> = (props) => {
                     quality={100}
                     unoptimized={true}
                     style={{
-                      width: '100%',
-                      height: 'auto',
+                      width: "100%",
+                      height: "auto",
                     }}
                   />
                 </div>
@@ -157,8 +157,8 @@ const Carousel: React.FC<PropType> = (props) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
+              className={"embla__dot".concat(
+                index === selectedIndex ? " embla__dot--selected" : ""
               )}
             />
           ))}

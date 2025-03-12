@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Carousel from './carousel';
-import { EmblaOptionsType } from 'embla-carousel';
+import React from "react";
+import Carousel from "./carousel";
+import { EmblaOptionsType } from "embla-carousel";
 
 const OPTIONS: EmblaOptionsType = {};
 // const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
@@ -11,29 +11,29 @@ const OPTIONS: EmblaOptionsType = {};
 const SLIDES = [
   {
     id: 1,
-    title: 'Ecometrics',
+    title: "Ecometrics",
     description:
-      'Web Application for Managing ESG data through Custom Frameworks for Sustainable Investing.',
-    link: 'https://github.com/haidara02/ecometrics',
+      "Web Application for Managing ESG data through Custom Frameworks for Sustainable Investing.",
+    link: "https://github.com/haidara02/ecometrics",
   },
   {
     id: 2,
-    title: 'dnspython',
+    title: "dnspython",
     description:
-      'Python app measuring the DNS resolution time for valid DNS resolvers.',
-    link: 'https://github.com/haidara02/dnspython',
+      "Python app measuring the DNS resolution time for valid DNS resolvers.",
+    link: "https://github.com/haidara02/dnspython",
   },
   {
     id: 3,
-    title: 'got',
-    description: 'A lightweight version control system inspired by Git.',
-    link: 'https://github.com/haidara02/got',
+    title: "got",
+    description: "A lightweight version control system inspired by Git.",
+    link: "https://github.com/haidara02/got",
   },
   {
     id: 4,
-    title: 'notsed',
-    description: 'Basic text processor based on the sed stream editor.',
-    link: 'https://github.com/haidara02/notsed',
+    title: "notsed",
+    description: "Basic text processor based on the sed stream editor.",
+    link: "https://github.com/haidara02/notsed",
   },
 ];
 

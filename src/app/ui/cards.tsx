@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import '../styles/cards.css';
+"use client";
+import React from "react";
+import Image from "next/image";
+import "../styles/cards.css";
 
 const Cards = () => {
   return (
