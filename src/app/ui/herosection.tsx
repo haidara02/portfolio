@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { EnvelopeIcon, DocumentTextIcon } from "@heroicons/react/24/solid";
 import { useState, useEffect } from "react";
-import clsx from "clsx";
 import { TypeAnimation } from "react-type-animation";
 import Cards from "./cards";
 import { motion } from "framer-motion";

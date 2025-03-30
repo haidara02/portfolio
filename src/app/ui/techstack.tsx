@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import useMeasure from "react-use-measure";
 import { animate, motion, useMotionValue } from "framer-motion";
 import {
@@ -28,14 +28,13 @@ const techIcons = [
 ];
 
 const TechStack: React.FC = () => {
-  let [ref, { width }] = useMeasure();
+  const [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(0);
 
   useEffect(() => {
-    let finalPos = -width / 2 - 8;
-    let controls;
+    const finalPos = -width / 2 - 8;
 
-    controls = animate(xTranslation, [0, finalPos], {
+    const controls = animate(xTranslation, [0, finalPos], {
       ease: "linear",
       duration: 10,
       repeat: Infinity,
