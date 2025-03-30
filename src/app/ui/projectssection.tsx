@@ -41,11 +41,16 @@ const ProjectsSection: React.FC = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center p-10 bg-clay-darkBrown"
+      className="flex flex-col items-center justify-center p-1 md:p-10 bg-clay-darkBrown text-clay-cream"
     >
-      <h2 className="text-xl md:text-3xl md:leading-normal font-extrabold text-clay-cream">
+      <h2 className="text-xl md:text-3xl md:leading-normal font-extrabold">
         My Projects
       </h2>
+      <p className="text-xs px-8 md:px-1">
+        <span className="hidden md:inline">Hover</span>
+        <span className="inline md:hidden">Tap</span> to see the details of each
+        project.
+      </p>
       <div className="items-center flex justify-center m-auto p-6 lg:w-3/5">
         <Carousel slides={SLIDES} options={OPTIONS} />
       </div>

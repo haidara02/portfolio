@@ -1,0 +1,47 @@
+/* [project]/src/app/styles/cards.css [app-client] (css) */
+.cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --angle: 50deg;
+}
+
+.cards:hover {
+  --angle: 120deg;
+}
+
+.cards div:first-child {
+  transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 1));
+}
+
+.cards div:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 2));
+}
+
+.cards div:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 3));
+}
+
+.cards div:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 4));
+}
+
+.cards div:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 / 2 + var(--angle) / 6 * 5));
+}
+
+.card {
+  background: #3e2723;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 30px #0000001a;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 120%;
+  transition: transform .3s ease-out;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=src_app_styles_cards_b52d8e88.css.map*/

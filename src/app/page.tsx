@@ -5,6 +5,7 @@ import AboutSection from "@/app/ui/aboutsection";
 import ProjectsSection from "./ui/projectssection";
 import ContactSection from "./ui/contactsection";
 import FooterSection from "./ui/footersection";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -14,7 +15,12 @@ export default function Home() {
         <HeroSection />
       </div>
       <div className="h-[100px] relative overflow-hidden z-10 mt-[100vh] md:mt-[85vh] flex w-full">
-        <div className="h-[100px] bg-clay-darkBrown watermask"></div>
+        <motion.div
+          initial={{ y: "100%" }}
+          animate={{ y: "0%" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="h-[100px] bg-clay-darkBrown watermask"
+        ></motion.div>
       </div>
       <div className="z-10 -mt-[2]">
         <AboutSection />

@@ -23,6 +23,7 @@ export default {
           yellow: '#dda15e',
           brown: '#894e1a',
           darkBrown: '#3e2723',
+          deepBrown: '#2b1b18',
         },
       },
       keyframes: {

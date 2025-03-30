@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import TechStack from "./techstack";
 
 const AboutSection: React.FC = () => {
   return (
@@ -28,8 +29,8 @@ const AboutSection: React.FC = () => {
           reach out if you want to connect!
         </p> */}
         </div>
-        <div className="mt-4 lg:mt-0 px-6 py-10 lg:px-10">
-          <div className="rounded-full w-[400px] h-[400px] relative overflow-hidden border-[6px] hover:border-dashed border-clay-green">
+        <div className="mt-4 lg:mt-0 px-6 py-10 lg:px-10 flex flex-col items-center justify-center gap-5">
+          <div className="rounded-full w-[20rem] h-[20rem] relative overflow-hidden border-[6px] hover:border-dashed border-clay-green">
             <Image
               src="/images/heroimage.jpg"
               alt="hero image"
@@ -38,6 +39,7 @@ const AboutSection: React.FC = () => {
               height={300}
             />
           </div>
+          <TechStack />
         </div>
       </div>
     </section>

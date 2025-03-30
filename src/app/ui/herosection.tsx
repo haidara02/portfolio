@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import clsx from "clsx";
 import { TypeAnimation } from "react-type-animation";
 import Cards from "./cards";
+import { motion } from "framer-motion";
 
 const HeroSection: React.FC = () => {
   const greetings = [
@@ -38,28 +39,35 @@ const HeroSection: React.FC = () => {
   }, []);
   return (
     <section className="flex flex-col lg:flex-row gap-1 md:gap-5 items-center justify-center px-10 py-[80px] min-h-[100vh] md:min-h-[90vh] bg-clay-cream text-clay-darkBrown">
-      <div className="flex flex-col justify-center gap-6 px-6 pt-5 md:px-10">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}
+        className="flex flex-col justify-center gap-6 px-6 pt-5 md:px-10"
+      >
         <p className="font-extrabold flex overflow-hidden text-clamp flex-col md:flex-row">
-          <span
-            className={clsx(
-              `relative transition-all duration-1000 mr-5 ease-in-out overflow-hidden`,
-              fade ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
-            )}
+          <motion.span
+            key={currentGreeting} // Helps Framer Motion detect changes
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: fade ? "-100%" : "0%", opacity: fade ? 0 : 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="mr-5 overflow-hidden"
             style={{ whiteSpace: "nowrap" }}
           >
             {currentGreeting}
-          </span>
-          <span
-            className={clsx(
-              `relative transition-all duration-1000 ease-in-out overflow-hidden`,
-              fade
-                ? "-translate-y-[-100%] opacity-0"
-                : "translate-y-0 opacity-100"
-            )}
+          </motion.span>
+          <motion.span
+            className="overflow-hidden"
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: fade ? "100%" : "0%", opacity: fade ? 0 : 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             style={{ whiteSpace: "nowrap" }}
           >
             I&apos;m Khoi.
-          </span>
+          </motion.span>
         </p>
         <p className={`text-sm md:text-xl md:leading-normal`}>
           I just finished my undergrad at{" "}
@@ -119,8 +127,17 @@ const HeroSection: React.FC = () => {
             <DocumentTextIcon className="w-5 md:w-6" />
           </Link>
         </div>
-      </div>
-      <Cards />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}
+      >
+        <Cards />
+      </motion.div>
     </section>
   );
 };
