@@ -5,7 +5,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 // import GitHubIcon from '../../../public/github.svg';
 // import LinkedInIcon from '../../../public/linkedin.svg';
 import {
-  CheckCircleIcon,
+  // CheckCircleIcon,
   // XCircleIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/solid";
@@ -25,6 +25,9 @@ const ContactSection: React.FC = () => {
     if (!token) {
       setMessage("Please complete the CAPTCHA");
       setMailSent(true);
+      setTimeout(() => {
+        setMailSent(false);
+      }, 3000);
       return;
     }
 
@@ -116,7 +119,6 @@ const ContactSection: React.FC = () => {
         >
           <div className="flex items-center justify-center gap-2 bg-opacity-80 bg-clay-darkBrown rounded-lg p-2 text-white">
             <h2 className="text-sm font-bold m-5">{message}</h2>
-            <CheckCircleIcon className="w-20 h-20 text-green-700" />
           </div>
         </div>
         <form
