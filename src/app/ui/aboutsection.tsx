@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import TechStack from "./techstack";
+import { motion } from "framer-motion";
 
 const AboutSection: React.FC = () => {
   return (
@@ -18,9 +19,9 @@ const AboutSection: React.FC = () => {
             management.
           </p>
           <p className="text-md md:text-xl md:leading-normal">
-            As a recent CS grad, I’ve got a strong foundation in core algorithms
-            and versatile tech stacks, and I’m eager to grow as an innovative
-            developer through meaningful connections and opportunities.
+            As a recent CS grad with a strong foundation in core algorithms and
+            versatile tech stacks, I’m eager to grow as a developer through
+            meaningful connections and innovative opportunities.
           </p>
           {/* <p className="text-md md:text-xl md:leading-normal">
           On a personal note, I figured pictures would tell my story best—one is
@@ -30,15 +31,23 @@ const AboutSection: React.FC = () => {
         </p> */}
         </div>
         <div className="mt-4 lg:mt-0 px-6 py-10 lg:px-10 flex flex-col items-center justify-center gap-5">
-          <div className="rounded-full w-[20rem] h-[20rem] relative overflow-hidden border-[6px] hover:border-dashed border-clay-green">
+          <motion.div
+            initial={{ rotate: "0deg" }}
+            animate={{ rotate: "360deg" }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="rounded-full w-[20rem] h-[20rem] relative overflow-hidden border-[6px] hover:border-dashed border-clay-green"
+          >
             <Image
-              src="/images/heroimage.jpg"
+              src="/images/dvd.png"
               alt="hero image"
               className="absolute object-cover w-full h-full"
               width={300}
               height={300}
             />
-          </div>
+          </motion.div>
+          <h2 className="text-xl md:leading-normal font-extrabold">
+            My Tech Stack
+          </h2>
           <TechStack />
         </div>
       </div>

@@ -45,7 +45,7 @@ const TechStack: React.FC = () => {
     return controls.stop;
   }, [width, xTranslation]);
   return (
-    <section className="relative overflow-hidden bg-clay-deepBrown py-4 rounded-full max-w-[400px] w-full">
+    <section className="relative overflow-hidden bg-clay-deepBrown py-4 rounded-full max-w-[400px] w-[80%]">
       {/* Left vignette */}
       <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-clay-deepBrown to-transparent z-10" />
 
@@ -62,13 +62,13 @@ const TechStack: React.FC = () => {
               alt="C++"
               width={40}
               height={40}
-              className="fill-clay-cream"
+              className="fill-clay-cream transition delay-150 duration-300 ease-in-out hover:scale-110"
             />
           ) : (
             <FontAwesomeIcon
               key={index}
               icon={icon}
-              className="text-clay-cream text-4xl"
+              className="text-clay-cream text-4xl transition delay-150 duration-300 ease-in-out hover:scale-110"
             />
           );
         })}
