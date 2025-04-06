@@ -4,22 +4,50 @@ import React, { useState } from "react";
 // import GitHubIcon from '../../../public/github.svg';
 // import LinkedInIcon from '../../../public/linkedin.svg';
 import {
-  // CheckCircleIcon,
-  XCircleIcon,
+  CheckCircleIcon,
+  // XCircleIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import clsx from "clsx";
 
 const ContactSection: React.FC = () => {
-  const [mailSent, setMailSent] = useState(true);
+  const [mailSent, setMailSent] = useState(false);
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setMailSent(true);
-    setTimeout(() => {
-      setMailSent(false);
-    }, 3000);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "041c2d82-ea82-4418-8f00-9b34b9758ea5",
+        name: (e.target as any).name.value,
+        email: (e.target as any).email.value,
+        message: (e.target as any).message.value,
+      }),
+    })
+      .then(async (res) => {
+        let json = await res.json();
+        if (json.success) {
+          setMessage("Form is sent successfully!");
+        } else {
+          setMessage("Error sending form");
+        }
+        setMailSent(true);
+        setTimeout(() => {
+          setMailSent(false);
+        }, 3000);
+      })
+      .catch((err) => {
+        console.log(err);
+        setMessage("Form host is not currently available");
+        setMailSent(true);
+      });
+    void response;
   };
 
   //   const handleSubmit = async (
@@ -73,12 +101,8 @@ const ContactSection: React.FC = () => {
           )}
         >
           <div className="flex items-center justify-center gap-2 bg-opacity-80 bg-clay-darkBrown rounded-lg p-2 text-white">
-            <h2 className="text-sm font-bold m-5">
-              Form currently unavailable (domain invalid). Please click the
-              email icon below to send an email through your associated mail
-              app.
-            </h2>
-            <XCircleIcon className="w-20 h-20 text-red-700" />
+            <h2 className="text-sm font-bold m-5">{message}</h2>
+            <CheckCircleIcon className="w-20 h-20 text-green-700" />
           </div>
         </div>
         <form
