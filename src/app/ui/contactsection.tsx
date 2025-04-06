@@ -143,6 +143,7 @@ const ContactSection: React.FC = () => {
         </Link>
         <Link
           href="http://github.com/haidara02"
+          target="_blank"
           className="bg-clay-darkBrown hover:bg-clay-brown rounded-full p-3 scale-100 hover:scale-110 transition-transform ease-in-out duration-100"
         >
           <svg
@@ -163,6 +164,7 @@ const ContactSection: React.FC = () => {
         </Link>
         <Link
           href="https://www.linkedin.com/in/khoi-tn/"
+          target="_blank"
           className="bg-clay-darkBrown hover:bg-clay-brown rounded-full p-3 scale-100 hover:scale-110 transition-transform ease-in-out duration-100"
         >
           <svg
