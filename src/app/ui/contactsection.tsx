@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 // import GitHubIcon from '../../../public/github.svg';
 // import LinkedInIcon from '../../../public/linkedin.svg';
 import {
@@ -15,8 +16,19 @@ const ContactSection: React.FC = () => {
   const [mailSent, setMailSent] = useState(false);
   const [message, setMessage] = useState("");
 
+  const [token, setToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!token) {
+      setMessage("Please complete the CAPTCHA");
+      setMailSent(true);
+      return;
+    }
+
+    const form = e.currentTarget;
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -25,13 +37,15 @@ const ContactSection: React.FC = () => {
       },
       body: JSON.stringify({
         access_key: "041c2d82-ea82-4418-8f00-9b34b9758ea5",
-        name: (e.target as any).name.value,
-        email: (e.target as any).email.value,
-        message: (e.target as any).message.value,
+        name: (form.elements.namedItem("name") as HTMLInputElement)?.value,
+        email: (form.elements.namedItem("email") as HTMLInputElement)?.value,
+        message: (form.elements.namedItem("message") as HTMLTextAreaElement)
+          ?.value,
+        "h-captcha-response": token,
       }),
     })
       .then(async (res) => {
-        let json = await res.json();
+        const json = await res.json();
         if (json.success) {
           setMessage("Form is sent successfully!");
         } else {
@@ -156,6 +170,12 @@ const ContactSection: React.FC = () => {
           >
             Send Message
           </button>
+          <HCaptcha
+            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            reCaptchaCompat={false}
+            ref={captchaRef}
+            onVerify={setToken}
+          />
         </form>
       </div>
       <div className="socials flex flew-row gap-2 py-5">
