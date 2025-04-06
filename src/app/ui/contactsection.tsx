@@ -162,7 +162,7 @@ const ContactSection: React.FC = () => {
           </svg>
         </Link>
         <Link
-          href="http://linkedin.com/khoi-tn"
+          href="https://www.linkedin.com/in/khoi-tn/"
           className="bg-clay-darkBrown hover:bg-clay-brown rounded-full p-3 scale-100 hover:scale-110 transition-transform ease-in-out duration-100"
         >
           <svg
