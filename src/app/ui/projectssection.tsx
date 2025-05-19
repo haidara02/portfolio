@@ -25,15 +25,15 @@ const SLIDES = [
   },
   {
     id: 3,
-    title: "got",
-    description: "A lightweight version control system inspired by Git.",
-    link: "https://github.com/haidara02/got",
-  },
-  {
-    id: 4,
     title: "notsed",
     description: "Basic text processor based on the sed stream editor.",
     link: "https://github.com/haidara02/notsed",
+  },
+  {
+    id: 4,
+    title: "got",
+    description: "A lightweight version control system inspired by Git.",
+    link: "https://github.com/haidara02/got",
   },
 ];
 
