@@ -10,6 +10,13 @@ A sleek coffee-themed portfolio built with **Next.js** and **TypeScript**. Manag
 - **Styling:** Tailwind CSS
 - **Deployment:** Vercel
 
+## Planned Features
+
+- Additional framer motion animations
+- Discord style window for travels
+- - Put a carousel for each country into 'discord servers' for portolio website
+- Animated snoopy hover icon
+
 ## Getting Started
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
