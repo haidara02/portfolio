@@ -14,7 +14,7 @@ A sleek coffee-themed portfolio built with **Next.js** and **TypeScript**. Manag
 
 - Additional framer motion animations
 - Discord style window for travels
-- - Put a carousel for each country into 'discord servers' for portolio website
+  - Carousel for each country into 'discord servers' for portolio website
 - Animated snoopy hover icon
 
 ## Getting Started
