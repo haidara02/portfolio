@@ -117,7 +117,7 @@ const HeroSection: React.FC = () => {
             <EnvelopeIcon className="w-5 md:w-6" />
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1D9IlVR_hdvUmp_Z_ADEe4_rno0P3Mr-8/view?usp=sharing"
+            href={process.env.RESUME_URL?.trim() || "/resume.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full bg-clay-darkBrown px-6 py-3 text-sm w-full sm:w-fit font-medium text-white transition-colors hover:bg-clay-brown md:text-base"
